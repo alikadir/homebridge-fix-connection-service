@@ -1,0 +1,12 @@
+[Unit]
+Description=Fix connection after power outage
+
+[Service]
+WorkingDirectory=/home/alikadir
+ExecStart=/bin/bash fix-connection.sh
+Restart=on-failure
+Type=simple
+User=alikadir
+
+[Install]
+WantedBy=multi-user.target
