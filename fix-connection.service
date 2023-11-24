@@ -1,12 +1,12 @@
 [Unit]
 Description=Fix connection after power outage
-After=homebridge.service 
-Requires=homebridge.service                   
+After=homebridge.service
+Requires=homebridge.service
 
 [Service]
 WorkingDirectory=/home/alikadir
 ExecStart=/bin/bash fix-connection.sh
-ExecStop=/bin/bash -c "Fix connection service stopped. AKB"
+ExecStop=/bin/bash -c 'echo "Fix connection service stopped."'
 Restart=on-failure
 Type=simple
 User=alikadir
