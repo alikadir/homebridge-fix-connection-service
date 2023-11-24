@@ -1,5 +1,7 @@
 [Unit]
 Description=Fix connection after power outage
+After=homebridge.service 
+Requires=homebridge.service                   
 
 [Service]
 WorkingDirectory=/home/alikadir
