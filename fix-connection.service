@@ -6,6 +6,7 @@ Requires=homebridge.service
 [Service]
 WorkingDirectory=/home/alikadir
 ExecStart=/bin/bash fix-connection.sh
+ExecStop=/bin/bash -c "Fix service stopped."
 Restart=on-failure
 Type=simple
 User=alikadir
